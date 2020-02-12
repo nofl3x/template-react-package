@@ -1,6 +1,6 @@
 {
   "name": "react-pkg-template",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A template for fast development NPM packages contains ReactJS component",
   "main": "dist/index.js",
   "scripts": {
@@ -19,6 +19,7 @@
   ],
   "author": "NoFl3x",
   "license": "MIT",
+  "typings": "./dist/index.d.ts",
   "files": [
     "dist/**/*"
   ],
