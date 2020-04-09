@@ -1,4 +1,4 @@
-// This file contains a simple react component
+// This file contains a simple React component
 import * as React from 'react'
 
 /**
@@ -18,7 +18,7 @@ export function SimpleComponent(props: React.PropsWithChildren<ISimpleComponentP
 
   return (
     <div className="simpleComponent">
-      <div className="simpleComponent__text">{text}</div>
+      <div className="simpleComponent__text" data-testid="test-text">{text}</div>
       <div className="simpleComponent__content">{children}</div>
     </div>
   )

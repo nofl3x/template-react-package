@@ -1,38 +1,33 @@
 import * as React from 'react'
-import { shallow } from 'enzyme'
+import { render, cleanup } from '@testing-library/react'
+import '@testing-library/jest-dom'
+
 import { ISimpleComponentProps, SimpleComponent } from '../index'
 
 const defaultProps: ISimpleComponentProps = {
   text: 'Simple text'
 }
 
-describe('<SimpleComponent/>', () => {
+describe('<SimpleComponent /> Snapshot', () => {
 
-  it('It should render without errors', () => {
-    const component = shallow(
-      <SimpleComponent {...defaultProps} />
-    )
+  describe('SimpleComponent Snapshot', () => {
+    afterEach(cleanup)
 
-    expect(component.find('.simpleComponent')).toHaveLength(1)
+    it('It should take a snapshot', () => {
+      const { asFragment } = render(<SimpleComponent {...defaultProps} />)
+      expect(asFragment()).toMatchSnapshot()
+    })
   })
 
-  it('It should render text correctly', () => {
-    const component = shallow(
-      <SimpleComponent {...defaultProps} />
-    )
 
-    expect(component.find('.simpleComponent__text')).toHaveLength(1)
-    expect(component.find('.simpleComponent__text').html()).toMatch(/Simple text/)
-  })
+  describe('SimpleComponent props', () => {
+    afterEach(cleanup)
 
-  it('It should render children correctly', () => {
-    const component = shallow(
-      <SimpleComponent {...defaultProps}>
-        <span>children element</span>
-      </SimpleComponent>
-    )
-
-    expect(component.find('.simpleComponent__content')).toHaveLength(1)
-    expect(component.find('span').html()).toMatch(/children element/)
+    it('It should render text correctly', () => {
+      const { getByTestId } = render(<SimpleComponent {...defaultProps} />)
+      expect(getByTestId('test-text')).toHaveTextContent(defaultProps.text)
+    })
   })
 })
+
+

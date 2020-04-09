@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SimpleComponent /> Snapshot SimpleComponent Snapshot It should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="simpleComponent"
+  >
+    <div
+      class="simpleComponent__text"
+      data-testid="test-text"
+    >
+      Simple text
+    </div>
+    <div
+      class="simpleComponent__content"
+    />
+  </div>
+</DocumentFragment>
+`;
