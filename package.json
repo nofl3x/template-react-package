@@ -1,6 +1,6 @@
 {
   "name": "react-pkg-template",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "A template for fast development NPM packages contains ReactJS component",
   "main": "dist/index.js",
   "scripts": {
@@ -27,20 +27,15 @@
     "react": "^16.12.0"
   },
   "devDependencies": {
-    "@storybook/react": "^5.3.9",
-    "@types/enzyme": "^3.10.4",
-    "@types/enzyme-adapter-react-16": "^1.0.5",
-    "@types/jest": "^25.1.0",
-    "@types/node": "^13.5.0",
-    "@types/storybook__react": "^5.2.1",
+    "@storybook/react": "^5.3.18",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.11.0",
     "awesome-typescript-loader": "^5.2.1",
-    "babel-loader": "^8.0.6",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "jest": "^25.1.0",
-    "jest-enzyme": "^7.1.2",
+    "babel-loader": "^8.1.0",
+    "jest": "^25.2.7",
+    "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "ts-jest": "^25.0.0",
-    "typescript": "^3.7.5"
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3"
   }
 }
