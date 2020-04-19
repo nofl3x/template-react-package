@@ -5,11 +5,10 @@ import '@testing-library/jest-dom'
 import { ISimpleComponentProps, SimpleComponent } from '../index'
 
 const defaultProps: ISimpleComponentProps = {
-  text: 'Simple text'
+  text: 'Simple text',
 }
 
 describe('<SimpleComponent /> Snapshot', () => {
-
   describe('SimpleComponent Snapshot', () => {
     afterEach(cleanup)
 
@@ -18,7 +17,6 @@ describe('<SimpleComponent /> Snapshot', () => {
       expect(asFragment()).toMatchSnapshot()
     })
   })
-
 
   describe('SimpleComponent props', () => {
     afterEach(cleanup)
@@ -29,5 +27,3 @@ describe('<SimpleComponent /> Snapshot', () => {
     })
   })
 })
-
-
